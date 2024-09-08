@@ -1,0 +1,25 @@
+
+function calcularCustoConsumidor(custoFabrica) {
+  
+    if (custoFabrica < 0 || !Number.isFinite(custoFabrica)) {
+        console.log("O custo de fábrica deve ser um número positivo.");
+        return;
+    }
+
+   
+    const percentualDistribuidor = 0.28;
+    const percentualImpostos = 0.45;
+
+   
+    let valorDistribuidor = custoFabrica * percentualDistribuidor;
+
+    let valorImpostos = custoFabrica * percentualImpostos;
+    
+    let custoConsumidor = custoFabrica + valorDistribuidor + valorImpostos;
+
+    console.log(`O custo ao consumidor é: R$ ${custoConsumidor.toFixed(2)}`);
+}
+
+let custoFabrica = 30000; // Exemplo de custo de fábrica em reais
+
+calcularCustoConsumidor(custoFabrica);
