@@ -1,0 +1,32 @@
+
+function converterTempo(segundosTotais) {
+  
+    if (segundosTotais < 0 || !Number.isInteger(segundosTotais)) {
+        console.log("O tempo deve ser um número inteiro e não-negativo.");
+        return;
+    }
+
+ 
+    const segundosPorHora = 3600;
+    const segundosPorMinuto = 60;
+
+
+    let horas = Math.floor(segundosTotais / segundosPorHora);
+    
+  
+    let segundosRestantes = segundosTotais % segundosPorHora;
+    
+  
+    let minutos = Math.floor(segundosRestantes / segundosPorMinuto);
+    
+  
+    let segundos = segundosRestantes % segundosPorMinuto;
+
+    
+    console.log(`O tempo é: ${horas} horas, ${minutos} minutos e ${segundos} segundos.`);
+}
+
+
+let segundosTotais = 3665;
+
+converterTempo(segundosTotais);
