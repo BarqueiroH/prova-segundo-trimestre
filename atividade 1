@@ -1,0 +1,29 @@
+
+function calcularDistancia(x1, y1, x2, y2) {
+    
+    let dx = x2 - x1;
+    let dy = y2 - y1;
+    
+ 
+    let dxQuadrado = dx * dx;
+    let dyQuadrado = dy * dy;
+    
+  
+    let soma = dxQuadrado + dyQuadrado;
+    
+
+    let distancia = Math.sqrt(soma);
+    
+   
+    return distancia;
+}
+//exemplo
+
+let x1 = 1;
+let y1 = 2;
+let x2 = 9;
+let y2 = 6;
+
+console.log("A distância entre os pontos é:", calcularDistancia(x1, y1, x2, y2));
+
+// a distancia que tem que dar e 8
