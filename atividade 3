@@ -1,0 +1,25 @@
+
+function converterIdadeParaDias(anos, meses, dias) {
+ 
+    if (anos < 0 || meses < 0 || dias < 0 || !Number.isInteger(anos) || !Number.isInteger(meses) || !Number.isInteger(dias)) {
+        console.log("Os valores devem ser inteiros e não-negativos.");
+        return;
+    }
+
+
+    const diasPorAno = 365;
+    const diasPorMes = 30;
+
+ 
+    let totalDias = (anos * diasPorAno) + (meses * diasPorMes) + dias;
+
+ 
+    console.log("A idade expressa em dias é:", totalDias);
+}
+
+// Exemplo de data :>
+let anos = 25;  
+let meses = 6;   
+let dias = 15;  
+
+converterIdadeParaDias(anos, meses, dias);
