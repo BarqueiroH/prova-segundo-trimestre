@@ -1,0 +1,25 @@
+
+function calcularExpressao(A, B, C) {
+  
+    if (A <= 0 || B <= 0 || C <= 0) {
+        console.log("Todos os números devem ser inteiros e positivos.");
+        return;
+    }
+
+   
+    let r = Math.pow(A + B, 2);
+    let s = Math.pow(B + C, 2);
+
+ 
+    let d = (r + s) / 2;
+
+
+    console.log("O valor de d é:", d);
+}
+
+// Exemplo de numeros 
+let A = 2; 
+let B = 3; 
+let C = 2; 
+
+calcularExpressao(A, B, C);
