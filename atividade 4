@@ -1,0 +1,32 @@
+
+function converterDiasParaIdade(totalDias) {
+
+    if (totalDias < 0 || !Number.isInteger(totalDias)) {
+        console.log("O total de dias deve ser um número inteiro e não-negativo.");
+        return;
+    }
+
+   
+    const diasPorAno = 365;
+    const diasPorMes = 30;
+
+
+    let anos = Math.floor(totalDias / diasPorAno);
+    
+ 
+    let diasRestantes = totalDias % diasPorAno;
+    
+
+    let meses = Math.floor(diasRestantes / diasPorMes);
+    
+  
+    let dias = diasRestantes % diasPorMes;
+
+  
+    console.log(`A idade expressa em anos, meses e dias é: ${anos} anos, ${meses} meses e ${dias} dias.`);
+}
+
+
+let totalDias = 9500; // Exemplo de idade em dias
+
+converterDiasParaIdade(totalDias);
